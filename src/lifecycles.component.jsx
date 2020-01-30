@@ -1,32 +1,32 @@
-import React from 'react';
+import React from "react";
 
-class Lifecycles extends React.Component {
+class Lifecycles extends React.PureComponent {
   constructor() {
     super();
-    console.log('constructor!');
+    console.log("constructor!");
   }
 
   componentDidMount() {
-    console.log('componentDidMount!');
+    console.log("componentDidMount!");
   }
 
   componentDidUpdate() {
-    console.log('componentDidUpdate!');
+    console.log("componentDidUpdate!");
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount!');
+    console.log("componentWillUnmount!");
   }
 
   shouldComponentUpdate(nextProps, nextState) {
-    console.log('shouldComponentUpdate!', nextProps);
+    console.log("shouldComponentUpdate!", nextProps);
     return nextProps.text !== this.props.text;
   }
 
   render() {
-    console.log('render!');
+    console.log("render!");
     return (
-      <div className='lifecycles'>
+      <div className="lifecycles">
         <h3>LIFECYCLES COMPONENT</h3>
         {this.props.text}
       </div>
